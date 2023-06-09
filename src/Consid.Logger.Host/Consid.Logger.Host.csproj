@@ -8,9 +8,11 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Consid.Logger.Adapter.Crone\Consid.Logger.Adapter.Crone.csproj" />
+        <ProjectReference Include="..\Consid.Logger.Adapter.ExternalSource\Consid.Logger.Adapter.ExternalSource.csproj" />
         <ProjectReference Include="..\Consid.Logger.Api\Consid.Logger.Api.csproj" />
         <ProjectReference Include="..\Consid.Logger.Domain\Consid.Logger.Domain.csproj" />
         <ProjectReference Include="..\Consid.Logger.Application\Consid.Logger.Application.csproj" />
+        <ProjectReference Include="..\Consid.Logger.Persist.AzureStorageTable\Consid.Logger.Persist.AzureStorageTable.csproj" />
     </ItemGroup>
 
 </Project>

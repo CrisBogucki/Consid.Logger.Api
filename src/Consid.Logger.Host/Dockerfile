@@ -21,4 +21,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-ENTRYPOINT ["dotnet", "Consid.Logger.Host.csproj"]
+ENTRYPOINT ["dotnet", "Consid.Logger.Host.dll"]

@@ -10,7 +10,6 @@ public static class Configuration
     public static void AddApplicationConfiguration(this IServiceCollection services)
     {
         services.AddAutoMapperConfiguration();
-        services.AddMemoryCache();
         services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
         services.AddValidatorsFromAssemblyContaining(typeof(Configuration), ServiceLifetime.Transient);
         services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PipelineValidationBehavior<,>));
