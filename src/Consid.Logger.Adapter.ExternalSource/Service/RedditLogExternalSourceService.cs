@@ -25,7 +25,7 @@ public class RedditLogExternalSourceService : IRedditLogExternalSourceService
         
         if (string.IsNullOrEmpty(response) || !response.StartsWith("[{"))
         {
-            _logger.LogError("External source Redis no found resource {ApiUrl}", apiUrl);
+            _logger.LogError("External source reddit no found resource {ApiUrl}", apiUrl);
             return new List<RedditLogModel>();
         }
 
