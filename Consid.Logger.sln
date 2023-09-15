@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persist", "Persist", "{C1C6
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Adapter", "Adapter", "{8C301D0C-9825-462F-B2BF-D9B56748F020}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consid.Logger.AzureFunction", "src\Consid.Logger.AzureFunction\Consid.Logger.AzureFunction.csproj", "{BD56D3C9-6EEF-456D-B2B2-3D84FC244786}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +42,7 @@ Global
 		{8C301D0C-9825-462F-B2BF-D9B56748F020} = {DE17D072-D1E9-4FDC-8C09-EB8B8F97E4EE}
 		{E99560EF-15B7-426E-B73A-D8F4A0595C33} = {8C301D0C-9825-462F-B2BF-D9B56748F020}
 		{29069AA3-95E5-49E0-8B68-C3871A97DAB3} = {8C301D0C-9825-462F-B2BF-D9B56748F020}
+		{BD56D3C9-6EEF-456D-B2B2-3D84FC244786} = {DE17D072-D1E9-4FDC-8C09-EB8B8F97E4EE}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A54BFFBC-D7F3-45D2-94DC-F25F5BF047B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -74,5 +77,9 @@ Global
 		{2674C534-3EA5-4316-9988-D38F3AD3B3AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2674C534-3EA5-4316-9988-D38F3AD3B3AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2674C534-3EA5-4316-9988-D38F3AD3B3AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD56D3C9-6EEF-456D-B2B2-3D84FC244786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD56D3C9-6EEF-456D-B2B2-3D84FC244786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD56D3C9-6EEF-456D-B2B2-3D84FC244786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD56D3C9-6EEF-456D-B2B2-3D84FC244786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

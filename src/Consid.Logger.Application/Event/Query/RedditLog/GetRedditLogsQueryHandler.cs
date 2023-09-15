@@ -5,7 +5,7 @@ using MediatR;
 
 namespace Consid.Logger.Application.Event.Query.RedditLog;
 
-public class GetRedditLogsQueryHandler : IRequestHandler<GetRedditLogsQuery, List<GetRedditLogQueryResult>>
+public class GetRedditLogsQueryHandler : IRequestHandler<GetRedditLogsQuery, IEnumerable<GetRedditLogQueryResult>>
 {
     private readonly IRedditLogRepository _redditLogRepository;
     private readonly IMapper _mapper;
@@ -16,10 +16,10 @@ public class GetRedditLogsQueryHandler : IRequestHandler<GetRedditLogsQuery, Lis
         _mapper = mapper;
     }
 
-    public async Task<List<GetRedditLogQueryResult>> Handle(GetRedditLogsQuery request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<GetRedditLogQueryResult>> Handle(GetRedditLogsQuery request, CancellationToken cancellationToken)
     {
         var result = await _redditLogRepository.GetAsync(request.DateFrom, request.DateTo);
         var redditLogEntities = result?.ToList();
-        return redditLogEntities?.Select(x => _mapper.Map<GetRedditLogQueryResult>(x)).ToList();
+        return redditLogEntities?.Select(x => _mapper.Map<GetRedditLogQueryResult>(x));
     }
 }

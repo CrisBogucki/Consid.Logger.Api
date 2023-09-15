@@ -27,7 +27,7 @@ public class RedditLogAzureStorageTableRepository : IRedditLogRepository
     {
         entity.Id = Guid.NewGuid();
         
-        var tableEntity = _mapper.Map<RedditLogTableEntity>(entity);
+        RedditLogTableEntity tableEntity = _mapper.Map<RedditLogTableEntity>(entity);
         
         tableEntity.PartitionKey = PartitionKey;
         tableEntity.RowKey = entity.Id.ToString();

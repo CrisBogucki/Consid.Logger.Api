@@ -23,11 +23,11 @@ public class RedditLogController : BaseController
     /// Get logs
     /// </summary>
     [HttpGet("logs")]
-    public async Task<List<RedditLogDto>> GetLogsAsync([FromQuery]GetRedditLogsRequest request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<RedditLogDto>> GetLogsAsync([FromQuery]GetRedditLogsRequest request, CancellationToken cancellationToken)
     {
         var query = _mapper.Map<GetRedditLogsQuery>(request);
         var result = await _mediator.Send(query, cancellationToken);
-        return result.Select(x=> _mapper.Map<RedditLogDto>(x)).ToList();
+        return result.Select(x => _mapper.Map<RedditLogDto>(x));
     }
 
     /// <summary>
