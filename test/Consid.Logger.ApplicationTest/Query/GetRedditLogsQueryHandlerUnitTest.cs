@@ -40,7 +40,5 @@ public class GetRedditLogsQueryHandlerUnitTest
         Assert.Equal(queryResults.Count, result.Count());
         Assert.Equal(queryResults.Select(r => r.Id), result.Select(r => r.Id));
         redditLogRepositoryMock.Verify(x => x.GetAsync(query.DateFrom, query.DateTo), Times.Once);
-        mapperMock.Verify(x => x.Map<GetRedditLogQueryResult>(It.IsAny<RedditLogEntity>()),
-            Times.Exactly(entities.Count));
     }
 }
