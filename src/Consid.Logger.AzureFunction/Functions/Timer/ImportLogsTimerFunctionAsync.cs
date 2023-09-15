@@ -21,10 +21,8 @@ public class ImportLogsTimerFunctionAsync
     }
 
     [Function("ImportLogsTimerFunction")]
-    public async Task RunAsync([TimerTrigger("10 * * * * *")] TimerInfo myTimer, ILogger logger)
+    public async Task RunAsync([TimerTrigger("10 * * * * *")] TimerInfo myTimer)
     {
-        logger.LogInformation($"C# Timer trigger function executed at: {DateTime.UtcNow}");
-        
         var logs = await _redditLogExternalSourceService.GetRedditLogsAsync();
         foreach (var log in logs)
         {

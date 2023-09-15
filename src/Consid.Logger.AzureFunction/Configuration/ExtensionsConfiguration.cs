@@ -1,3 +1,4 @@
+using Consid.Logger.Adapter.ExternalSource.Configuration;
 using Consid.Logger.Application.Configuration;
 using Consid.Logger.AzureFunction.Extensions;
 using Consid.Logger.Persist.AzureStorageTable.Configuration;
@@ -14,6 +15,7 @@ public static class ExtensionsConfiguration
         builder.ConfigureServices((context, services) =>
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddAdapterExternalSourceConfiguration();
             services.AddRepositoryAzureStorageTableConfiguration();
             services.AddApplicationConfiguration();
             services.AddValidation();
