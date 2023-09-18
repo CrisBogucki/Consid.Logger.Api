@@ -10,7 +10,7 @@ using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes;
 using Microsoft.OpenApi.Models;
 
-namespace Consid.Logger.AzureFunction.Functions.Http.RedditLog;
+namespace Consid.Logger.AzureFunction.Functions.Http.Functions.RedditLog;
 
 public class GetRedditLogsFunction
 {

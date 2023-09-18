@@ -4,7 +4,7 @@ using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Azure.WebJobs.Extensions.OpenApi.Core.Attributes;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
-namespace Consid.Logger.AzureFunction.Functions.Http.Health;
+namespace Consid.Logger.AzureFunction.Functions.Http.Functions.Health;
 
 public class HealthCheckFunction
 {
